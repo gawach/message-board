@@ -9,9 +9,19 @@ class MessagesController < ApplicationController
   end
 
   def new
+    @message = Message.new
   end
 
   def create
+    @message = Message.new(message_params)
+    
+    if @message.save
+      flash[:success] = 'Message が正常に投稿されました。'
+      redirect_to messages_path
+    else
+      flash.now[:danger] = 'Message が投稿されませんでした。'
+      render :new
+    end
   end
 
   def edit
@@ -21,5 +31,13 @@ class MessagesController < ApplicationController
   end
 
   def destroy
+  end
+  
+  
+  private
+  
+  #Strong Parameter
+  def message_params
+    params.require(:message).permit(:content)
   end
 end
