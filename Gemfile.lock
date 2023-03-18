@@ -172,7 +172,7 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tzinfo (1.2.7)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
@@ -198,7 +198,7 @@ DEPENDENCIES
   mysql2 (>= 0.4.4, < 0.6.0)
   pg (>= 0.18, < 2.0)
   pry-byebug
-  puma (~> 3.11)
+  puma (~> 4.3)
   rails (~> 5.2.2)
   sass-rails (~> 5.0)
   spring
